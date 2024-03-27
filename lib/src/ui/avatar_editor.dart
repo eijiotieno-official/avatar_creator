@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../data/models/skin.dart';
+
 class AvatarEditor extends StatefulWidget {
   const AvatarEditor({super.key});
 
@@ -16,6 +18,8 @@ class _AvatarEditorState extends State<AvatarEditor>
     _tabController = TabController(length: 8, vsync: this);
     super.initState();
   }
+
+  List<Skin> _skins = [];
 
   @override
   Widget build(BuildContext context) {
