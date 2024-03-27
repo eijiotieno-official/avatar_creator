@@ -1,9 +1,7 @@
 
-import 'package:avatar_creator/src/data/databases/skin_database.dart';
 import 'package:avatar_creator/src/data/models/skin.dart';
 import 'package:flutter/material.dart';
 
-import '../data/databases/clothe_database.dart';
 import '../data/models/cloth.dart';
 
 class AvatarEditor extends StatefulWidget {
@@ -23,8 +21,8 @@ class _AvatarEditorState extends State<AvatarEditor>
     super.initState();
   }
 
-  final List<Skin> _skins = SkinDatabase.data;
-  final List<Cloth> _cloths = ClothDatabase.data;
+  final List<Skin> _skins = [];
+  final List<Cloth> _cloths = [];
 
   @override
   Widget build(BuildContext context) {
