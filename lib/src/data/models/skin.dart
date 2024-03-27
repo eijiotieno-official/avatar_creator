@@ -1,8 +1,8 @@
 class Skin {
   final String title;
-  final String data;
+  final String svgPath;
   Skin({
     required this.title,
-    required this.data,
+    required this.svgPath,
   });
 }
