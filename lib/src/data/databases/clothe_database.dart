@@ -1,7 +1,7 @@
-import '../models/clothe.dart';
+import '../models/cloth.dart';
 
-class ClotheDatabase {
-  static Map<String, String> clotheColor = {
+class ClothDatabase {
+  static Map<String, String> clothColor = {
     "Black": "#262E33",
     "Blue01": "#65C9FF",
     "Blue02": "#5199E4",
@@ -19,60 +19,21 @@ class ClotheDatabase {
     "White": "#FFFFFF",
   };
 
-  static List<Clothe> data = [
-    Clothe(type: "Blazer + T-Shirt", svgPath: '''
-          <g id="Clothing/Blazer-+-Shirt" transform="translate(0.000000, 170.000000)">
-            <!-- SVG paths for Blazer + T-Shirt -->
-          </g>
-        '''),
-    Clothe(type: "BlazerSweater", svgPath: '''
-          <g id="Clothing/Blazer-+-Sweater" transform="translate(0.000000, 170.000000)">
-            <!-- SVG paths for BlazerSweater -->
-          </g>
-        '''),
-    Clothe(type: "CollarSweater", svgPath: '''
-          <g id="Clothing/Collar-+-Sweater" transform="translate(0.000000, 170.000000)">
-            <!-- SVG paths for CollarSweater -->
-          </g>
-        '''),
-    Clothe(type: "GraphicShirt", svgPath: '''
-          <g id="Clothing/Graphic-Shirt" transform="translate(0.000000, 170.000000)">
-            <!-- SVG paths for GraphicShirt -->
-          </g>
-        '''),
-    Clothe(type: "Hoodie", svgPath: '''
-          <g id="Clothing/Hoodie" transform="translate(0.000000, 170.000000)">
-            <!-- SVG paths for Hoodie -->
-          </g>
-        '''),
-    Clothe(type: "Overall", svgPath: '''
-          <g id="Clothing/Overall" transform="translate(0.000000, 170.000000)">
-            <!-- SVG paths for Overall -->
-          </g>
-        '''),
-    Clothe(type: "Crew Neck Tee", svgPath: '''
-          <g id="Clothing/Shirt-Crew-Neck" transform="translate(0.000000, 170.000000)">
-            <!-- SVG paths for Crew Neck Tee -->
-          </g>
-        '''),
-    Clothe(type: "Scoop-neck Tee", svgPath: '''
-          <g id="Clothing/Shirt-Scoop-Neck" transform="translate(0.000000, 170.000000)">
-            <!-- SVG paths for Scoop-neck Tee -->
-          </g>
-        '''),
+  static List<Cloth> data = [
+    
   ];
 
   static String generateData({
-    required String clotheType,
+    required String clothType,
     String clColor = "Black",
   }) {
-    String? colorHex = clotheColor[clColor];
-    Clothe? selectedClothe = data.firstWhere(
-      (clothe) => clothe.type == clotheType,
-      orElse: () => Clothe(type: "", svgPath: ""),
+    String? colorHex = clothColor[clColor];
+    Cloth? selectedCloth = data.firstWhere(
+      (cloth) => cloth.type == clothType,
+      orElse: () => Cloth(type: "", svgPath: ""),
     );
 
-    String svgPath = selectedClothe.svgPath;
+    String svgPath = selectedCloth.svgPath;
 
     // Here you can manipulate the SVG path based on the colorHex if needed
     // For example, you could replace a placeholder color in the SVG with the actual color
