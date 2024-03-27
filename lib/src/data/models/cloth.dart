@@ -1,5 +1,7 @@
+import 'package:avatar_creator/src/data/enum/cloth_type.dart';
+
 class Cloth {
-  final String type;
+  final ClothType type;
   final String svgPath;
 
   Cloth({
