@@ -1,0 +1,2 @@
+library avatar_creator;
+
