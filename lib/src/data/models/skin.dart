@@ -1,8 +1,10 @@
+import 'package:avatar_creator/src/data/enum/skin_type.dart';
+
 class Skin {
-  final String title;
+  final SkinType type;
   final String svgPath;
   Skin({
-    required this.title,
+    required this.type,
     required this.svgPath,
   });
 }
