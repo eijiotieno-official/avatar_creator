@@ -1,6 +1,9 @@
+import 'package:avatar_creator/src/data/databases/clothe_database.dart';
+import 'package:avatar_creator/src/data/databases/skin_database.dart';
+import 'package:avatar_creator/src/data/models/skin.dart';
 import 'package:flutter/material.dart';
 
-import '../data/models/skin.dart';
+import '../data/models/clothe.dart';
 
 class AvatarEditor extends StatefulWidget {
   const AvatarEditor({super.key});
@@ -19,19 +22,21 @@ class _AvatarEditorState extends State<AvatarEditor>
     super.initState();
   }
 
-  List<Skin> _skins = [];
+  final List<Skin> _skins = SkinDatabase.data;
+  final List<Clothe> _clothes = ClotheDatabase.data;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
+        // SvgPicture.string(ClotheDatabase.generateData(clotheType: "CollarSweater")),
         Flexible(
           child: TabBarView(
             physics: const BouncingScrollPhysics(),
             controller: _tabController,
             children: [
-              _buildGrid([]),
-              _buildGrid([]),
+              _buildGrid(_skins),
+              _buildGrid(_clothes),
               _buildGrid([]),
               _buildGrid([]),
               _buildGrid([]),
