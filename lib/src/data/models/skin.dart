@@ -1,8 +1,8 @@
 class Skin {
   final String title;
-  final String value;
+  final String data;
   Skin({
     required this.title,
-    required this.value,
+    required this.data,
   });
 }
